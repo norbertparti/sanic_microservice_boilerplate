@@ -13,8 +13,6 @@ notifications:
 matrix:
   include:
     - python: 3.6
-      env: TOXENV=cov-init
-    - python: 3.6
       env: TOXENV=flake8
     - python: 3.6
       env: TOXENV=e2e-cov
