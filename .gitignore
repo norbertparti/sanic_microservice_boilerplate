@@ -3,6 +3,10 @@
 micro
 .idea
 
+# Coverage report
+.coverage.*
+htmlcov
+
 # Byte-compiled / optimized / DLL files
 **/__pycache__
 **.py[cod]

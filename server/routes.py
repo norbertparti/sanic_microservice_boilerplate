@@ -1,9 +1,11 @@
-from sanic.response import json
-from sanic import Blueprint, response
-
 import aiohttp
 
-bp = Blueprint('v1', url_prefix='/v1')
+
+from sanic import Blueprint, response
+from sanic.response import json
+
+apiVersionOne = Blueprint('v1', url_prefix='/v1')
+
 
 async def bounded_fetch(session, url):
     """
@@ -13,7 +15,7 @@ async def bounded_fetch(session, url):
         return await session.json()
 
 
-@bp.route("/")
+@apiVersionOne.route("/")
 async def test(request):
     """
     Download and serve example JSON
@@ -25,6 +27,6 @@ async def test(request):
         return json(res)
 
 
-@bp.route("/hello")
+@apiVersionOne.route("/hello")
 async def hello(request):
     return response.json({"hello": "world"})
