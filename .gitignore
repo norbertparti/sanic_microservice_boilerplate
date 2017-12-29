@@ -10,3 +10,8 @@ htmlcov
 # Byte-compiled / optimized / DLL files
 **/__pycache__
 **.py[cod]
+
+# virtualenvs
+dev
+flake8
+prod
